@@ -4,24 +4,26 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { LayoutModule } from '@angular/cdk/layout';
+import { MatCardModule } from '@angular/material/card';
 import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { HomeComponent } from './Components/home/home.component';
 import { MovieDetailComponent } from './Components/movie-detail/movie-detail.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MovieCardComponent } from './Components/movie-card/movie-card.component';
-
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatMenuModule } from '@angular/material/menu';
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { MatButtonModule } from '@angular/material/button';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     MovieDetailComponent,
     NavBarComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    DashboardComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,9 +34,13 @@ import { MovieCardComponent } from './Components/movie-card/movie-card.component
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    MatButtonModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
